@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Just backbone view & render</title>
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
+
+  <script>
+	(function($){
+	  var MyView = Backbone.View.extend({
+		el: $('body'), 
+		initialize: function(){
+		  this.render();
+		},
+		render: function(){
+		  $(this.el).append("<p>Hello welcome to Backbone view & render</p>");
+		}
+	  });
+
+	  var myView = new MyView();
+	})(jQuery);
+  </script>
+</body>
+</html>
+
